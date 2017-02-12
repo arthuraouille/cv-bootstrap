@@ -11,7 +11,28 @@
         <script type="application/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script type="application/javascript" src="js/script.js"></script>
     </head>
-    <body>
+    <body data-spy="scroll" data-target=".navbar" data-offset="60">
+        
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#about">Qui suis-je ?</a></li>
+                        <li><a href="#skills">Compétences</a></li>
+                        <li><a href="#experience">Expérience professionnelle</a></li>
+                        <li><a href="#education">Formation</a></li>
+                        <li><a href="#recommendations">Témoignages</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
         
         <!-- Section 1 - Présentation -->
         <section id="about" class="container-fluid">        
@@ -26,14 +47,14 @@
         </section>
         
         <!-- Section 2 - Compétences -->
-        <section id="skills">        
-            <div class="red-divider"></div>
-            <div class="heading">
-                <h2>Compétences</h2>
-            </div>
-            <div class="container">
+        <section id="skills"> 
+            <div class="container">       
+                <div class="red-divider"></div>
+                <div class="heading">
+                    <h2>Compétences</h2>
+                </div>
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-md-6 col-lg-3">
                         <ul class="list-group">
                             <li class="list-group-item disabled" style="cursor: default;">Langages</li>
                             <li class="list-group-item">SQL
@@ -92,7 +113,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-6 col-lg-3">
                         <ul class="list-group">
                             <li class="list-group-item disabled" style="cursor: default;">Business Intelligence</li>
                             <li class="list-group-item">Excel / VBA
@@ -138,7 +159,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-6 col-lg-3">
                         <ul class="list-group">
                             <li class="list-group-item disabled" style="cursor: default;">Web Analytics</li>
                             <li class="list-group-item">Google Analytics
@@ -175,7 +196,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-6 col-lg-3">
                         <ul class="list-group">
                             <li class="list-group-item disabled" style="cursor: default;">Autres Outils</li>
                             <li class="list-group-item">Tag Commander
@@ -193,7 +214,7 @@
                                     <span class="glyphicon glyphicon-star"></span>
                                     <span class="glyphicon glyphicon-star"></span>
                                     <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
                                 </div>
                             </li>
                             <li class="list-group-item">Webtrends Optimize
@@ -219,12 +240,12 @@
         </section>
         
         <!-- Section 3 - Expérience professionnelle -->
-        <section id="experience" class="container-fluid">      
-            <div class="white-divider"></div>
-            <div class="heading">
-                <h2>Expérience Professionnelle</h2>
-            </div>
-            <div class="container">
+        <section id="experience" class="container-fluid"> 
+            <div class="container">     
+                <div class="white-divider"></div>
+                <div class="heading">
+                    <h2>Expérience Professionnelle</h2>
+                </div>
                 <ul class="timeline">
                     <li>
                         <div class="timeline-badge"><span class="glyphicon glyphicon-briefcase"></span></div>
@@ -343,12 +364,12 @@
         </section>
         
         <!-- Section 3 - Formation -->
-        <section id="education" class="container-fluid">     
-            <div class="red-divider"></div>
-            <div class="heading">
-                <h2>Formation</h2>
-            </div>
-            <div class="container">
+        <section id="education" class="container-fluid"> 
+            <div class="container">    
+                <div class="red-divider"></div>
+                <div class="heading">
+                    <h2>Formation</h2>
+                </div>
                 <div class="row">
                     <div class="col-sm-3"></div>
                     <div class="col-sm-6">
@@ -405,14 +426,45 @@
         </section>
         
         <!-- Section 4 - Recommandations -->
-        <section id="recommandations" class="container-fluid">     
-            <div class="white-divider"></div>
-            <div class="heading">
-                <h2>Recommandations</h2>
-            </div>
-            <div class="container">
-                
+        <section id="recommendations" class="container-fluid"> 
+            <div class="container">    
+                <div class="white-divider"></div>
+                <div class="heading">
+                    <h2>Témoignages</h2>
+                </div>
+                <div id="myReco" class="carousel slide text-center" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#myReco" data-slide="0" class="active"></li>
+                        <li data-target="#myReco" data-slide="1"></li>
+                        <li data-target="#myReco" data-slide="2"></li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <h3>"J'ai eu la chance qu'Arthur fasse partie de l'équipe e-commerce Monoprix. Il a apporté de très fortes compétences analytiques en même temps qu'un vrai sens des objectifs business, ce qui est une alliage rare. De plus, l'ensemble des personnes travaillant à ses côtés a loué son savoir-être à la fois professionnel et amical."</h3>
+                            <h4><a href="https://www.linkedin.com/in/patrickoualid/" target="_blank"><img src="images/linkedin.png" /> Patrick Oualid - Directeur E-Commerce - Monoprix</a></h4>
+                        </div>
+                        <div class="item">
+                            <h3>"Arthur is a proven expert in Analytics and all things data driven. At RueDuCommerce, he drove major improvements to the UX and customer journey on the website, and helped improve the overall conversion by 10 %. Arthur is a rare mix of expertise in data analysis, customer oriented mind and the ability to work with other teams in the organization. Arthur is reliable, hard working and a charming and very dedicated individual."</h3>
+                            <h4><a href="https://www.linkedin.com/in/gaeldevos/" target="_blank"><img src="images/linkedin.png" /> Gaël De Vos - Directeur Site - RueDuCommerce</a></h4>
+                        </div>
+                        <div class="item">
+                            <h3>"Arthur lead the analytics roadmap very capably at Photobox and proved that he was an expert on all types of website analytics solutions. He was also instrumental in providing training within the company, working with local country managers to ensure they had customised set-ups to better analyse their specific markets. On top of that, Arthur is a nice guy and was very easy to work with and manage on a day to day basis."</h3>
+                            <h4><a href="https://www.linkedin.com/in/paulgarethevans/" target="_blank"><img src="images/linkedin.png" /> Paul Evans - Directeur Web Product - Photobox</a></h4>
+                        </div>
+                    </div>
+                    <a class="left carousel-control" href="#myReco" data-slide="prev" role="button">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#myReco" data-slide="next" role="button">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                </div>
             </div>
         </section>
+        
+        <footer class="text-center">
+            <a href="#about"><span class="glyphicon glyphicon-chevron-up"></span></a>
+            <h5>Copyright © Arthur Aouillé 2017</h5>
+        </footer>
     </body>
 </html>
